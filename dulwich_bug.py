@@ -12,7 +12,7 @@ from tempfile import mkdtemp
 
 
 if __name__ == "__main__":
-    nr = Repo(mkdtemp())
+    nr = Repo.init(mkdtemp())
     fi = GitImportProcessor(nr)
     fi.import_stream(sys.stdin)
     exit(0)
